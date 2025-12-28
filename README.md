@@ -72,7 +72,7 @@ curl http://localhost:8080/api/metrics
 - **Memory**: <256MB heap
 - **Architecture**: Single matcher thread + concurrent producers
 
-## Recruiter Highlights
+## Key Highlights
 
 **"I designed a single-threaded matching engine with multi-producer order submission to minimize locking in the hot path. I measured throughput and latency using nanoTime and profiled allocation and CPU behavior using JFR to guide optimizations."**
 
