@@ -1,8 +1,12 @@
-src/
 *.class
+target/
+lib/
+.DS_Store
+*.log
+.idea/
+*.iml
+.vscode/
 .git/
-.gitignore
 README.md
-build.sh
 docker-compose.yml
-pom.xml
+render.yaml

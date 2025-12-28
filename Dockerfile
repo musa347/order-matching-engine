@@ -2,7 +2,7 @@ FROM eclipse-temurin:11-jdk-alpine AS builder
 
 WORKDIR /app
 
-COPY src/ src/
+COPY . .
 
 RUN mkdir -p target/classes && \
     cd src && \
