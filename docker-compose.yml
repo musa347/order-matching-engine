@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  matching-engine:
+    build: .
+    container_name: order-matching-engine
+    environment:
+      - JAVA_OPTS=-Xmx512m -Xms256m
+    volumes:
+      - ./logs:/app/logs
+    restart: unless-stopped

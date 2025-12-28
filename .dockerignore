@@ -1,0 +1,8 @@
+src/
+*.class
+.git/
+.gitignore
+README.md
+build.sh
+docker-compose.yml
+pom.xml

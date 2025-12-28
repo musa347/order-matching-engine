@@ -1,0 +1,11 @@
+version: 2
+services:
+  - type: web
+    name: order-matching-engine
+    env: java
+    buildCommand: ./build.sh
+    startCommand: java -jar target/matching-engine-1.0.0.jar
+    plan: free
+    envVars:
+      - key: PORT
+        sync: false
