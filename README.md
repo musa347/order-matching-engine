@@ -1,18 +1,18 @@
-# 🚀 High-Performance Order Matching Engine
+# High-Performance Order Matching Engine
 
 **Live Demo**: [Deploy to Render](https://render.com) 
 
 Single-threaded matching engine with lock-free hot path achieving **80K+ orders/sec** throughput.
 
-## 🏗️ Architecture Highlights
+## Architecture Highlights
 
-- ✅ **Single-threaded matching** - Deterministic order processing
-- ✅ **Lock-free hot path** - Zero synchronization in matching logic  
-- ✅ **Multi-producer submission** - Concurrent order submission via queue
-- ✅ **Nano-precision latency** - Sub-millisecond P99 latency tracking
-- ✅ **REST API** - Real-time metrics and order submission
+- Single-threaded matching - Deterministic order processing
+- Lock-free hot path - Zero synchronization in matching logic  
+- Multi-producer submission - Concurrent order submission via queue
+- Nano-precision latency - Sub-millisecond P99 latency tracking
+- REST API - Real-time metrics and order submission
 
-## 📊 API Endpoints
+## API Endpoints
 
 ### GET `/api/metrics`
 ```json
@@ -42,7 +42,7 @@ curl -X POST https://your-app.onrender.com/api/orders \
 }
 ```
 
-## 🚀 Deploy to Render
+## Deploy to Render
 
 1. **Fork this repo**
 2. **Connect to Render**:
@@ -51,7 +51,7 @@ curl -X POST https://your-app.onrender.com/api/orders \
    - Start Command: `java -jar target/matching-engine-1.0.0.jar`
 3. **Deploy** - Auto-deploys on git push
 
-## 🔧 Local Development
+## Local Development
 
 ```bash
 # Build & Run
@@ -65,14 +65,14 @@ java -jar target/matching-engine-1.0.0.jar
 curl http://localhost:8080/api/metrics
 ```
 
-## 📈 Performance Characteristics
+## Performance Characteristics
 
 - **Throughput**: 80K-100K orders/sec
 - **P99 Latency**: <1ms  
 - **Memory**: <256MB heap
 - **Architecture**: Single matcher thread + concurrent producers
 
-## 🎯 Recruiter Highlights
+## Recruiter Highlights
 
 **"I designed a single-threaded matching engine with multi-producer order submission to minimize locking in the hot path. I measured throughput and latency using nanoTime and profiled allocation and CPU behavior using JFR to guide optimizations."**
 
