@@ -3,9 +3,12 @@ FROM eclipse-temurin:11-jdk-alpine AS builder
 WORKDIR /app
 
 COPY src/ src/
-COPY build.sh .
 
-RUN chmod +x build.sh && ./build.sh
+RUN mkdir -p target/classes && \
+    cd src && \
+    find . -name "*.java" | xargs javac -d ../target/classes && \
+    cd .. && \
+    jar cfe target/matching-engine-1.0.0.jar orderbook.WebServer -C target/classes .
 
 FROM eclipse-temurin:11-jre-alpine
 
